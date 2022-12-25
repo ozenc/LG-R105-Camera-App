@@ -1,0 +1,322 @@
+<script>
+  test = false;;
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LG R105</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <link rel="manifest" href="manifest.json">
+  <script src="sample.js"></script>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="PWA Splash">
+  <link rel="apple-touch-startup-image" href="splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <!-- <link rel="apple-touch-startup-image" href="images/splash/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)"> -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png"> -->
+  
+  <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA/v3+APb9/QDd+voA9///APj//wD6//8A//n+AP3//wD+//8A+Pz+AP///wD7/P4Az/X1APn//gD79/oA2vX1APn+/wAHQ/UA/vn8AP3//QD//v8AH0jeAO76+ADZ/PkA8Pn6APv+/gD8/v4A/v7+AP/+/gDb+fgA9v79APv+/QD8/v0A/v79AP/9/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwsLFQETEhISDh0jCwsLAAsLCBcSEhISEhISAgkLCwALCxISCwsLCwsTCwsSCwsACxISHxYWFhYWFhYKCxILABISDxYWFhYWFhYWFhkLFgASCxYWFhYWIQsLCxYWCxYAEhAWFhYWFhQWFhYWFgsWABIBFhYWFhYUFhYWFhYLFgASARYWFhYWFBYWFhYWFhYAEhgWFgsLFhQWFhYWFhYWABISCxYLCxYiFhYWFhYWFgAbEhwWFhYWFhYWFhYWFgcAIxISARYWFhYWFhISEhYLAAsGEhINAwsLCxISEhIjCwALCwUSEhISEhISEh4ECwsACwsLCyAMEhISERoLCwsLAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAA=" rel="icon" type="image/x-icon" />
+  <style>
+    body{
+      background: darkgrey;
+      margin:0;
+      font: icon;
+      
+    }
+    .main{
+      padding-top: 65px;
+    }
+    .parameterLabel{
+      font-weight: bold;
+      color: blue;
+    }
+    .parameterLabel:after{
+      content: ": ";
+
+    }
+    .hidden{
+    display: none ;
+    }
+    .imagesDiv{
+      display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    }
+   
+
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+
+  </style>
+  <title id="title">Document</title>
+</head>
+<body>
+
+  <ul>
+    <li><a class="active" href="#home">Gallery</a></li>
+    <li><a onclick="getAllOptions()">Settings</a></li>
+    <li style="float:right"><a href="#about">About</a></li>
+  </ul>
+    <div class="main">
+    <div id="content"></div>
+    <div class="imagesDiv" id="imagesDiv"></div>
+</div>
+  <script>
+
+const all_options = {
+  "name": "camera.getOptions",
+  "parameters": {
+    "optionNames": [
+      "captureMode",
+      "captureModeSupport",
+      "exposureProgram",
+      "exposureProgramSupport",
+      "iso",
+      "isoSupport",
+      "shutterSpeed",
+      "shutterSpeedSupport",
+      "aperture",
+      "apertureSupport",
+      "whiteBalance",
+      "whiteBalanceSupport",
+      "exposureCompensation",
+      "exposureCompensationSupport",
+      "fileFormat",
+      "fileFormatSupport",
+      "speedOptimized",
+      "previewFormat",
+      "previewFormatSupport",
+      "exposureDelay",
+      "exposureDelaySupport",
+      "captureInterval",
+      "captureIntervalSupport",
+      "captureNumber",
+      "captureNumberSupport",
+      "sleepDelay",
+      "sleepDelaySupport",
+      "totalSpace",
+      "remainingSpace",
+      "remainingPictures",
+      "remainingVideoMinutes",
+      "gpsInfo",
+      "dateTimeZone",
+      "hdr",
+      "hdrSupport",
+      "exposureBracket",
+      "exposureBracketSupport",
+      "gyro",
+      "gyroSupport",
+      "gps",
+      "gpsSupport",
+      "imageStabilization",
+      "imageStabilizationSupport",
+      "wifiPassword",
+      "delayProcessing",
+      "delayProcessingSupport",
+      "_sceneMode",
+      "_sceneModeSupport",
+      "_timer",
+      "_timerSupport",
+      "_storage",
+      "_batteryLevel",
+      "_angle",
+      "_angleSupport",
+      "_audioChannel",
+      "_audioChannelSupport",
+      "_cameraId",
+      "_cameraIdSupport",
+      "_lgISO",
+      "_lgISOSupport",
+      "_lgShutterSpeed",
+      "_lgShutterSpeedSupport",
+      "_lgWhiteBalance",
+      "_lgWhiteBalanceSupport"
+    ]
+  }
+}
+
+
+
+// Example POST method implementation:
+async function postData(url = '', data = {}) {
+  if(test){
+    if(data.name == "camera.listFiles")
+    return gallery
+    if(data.name == "camera.getOptions")
+    return options
+  }
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}
+
+
+function getAllOptions(){
+  postData('http://192.168.43.1:6624/osc/commands/execute', all_options )
+  .then((data) => {
+    let content = document.getElementById("content")
+
+    console.log(data); 
+    
+    var indexes = Object.keys(data.results.options);
+    for (let index = 0; index < indexes.length; index++) {
+      const parameter = indexes[index];
+      let parameterValue
+
+      const parameterDiv =  document.createElement("div");
+
+      parameterDiv.id = parameter
+      const parameterLabel =  document.createElement("label");
+
+      if (parameter == "_timer" || parameter == "sleepDelay"|| parameter == "_cameraId" || parameter == "_angle") {
+
+        parameterValue =  document.createElement("input");
+        parameterValue.value =  data.results.options[parameter]
+        parameterValue.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        let _data = document.getElementById(parameter+"_val").value
+        console.log(_data/1)
+        if (isNaN(_data/1)) {
+          setOption(parameter, _data)
+        }
+        else{
+          setOption(parameter, _data/1)
+
+        }
+    }
+});
+
+      }
+      else{
+        parameterValue =  document.createElement("label");
+        parameterValue.innerHTML = data.results.options[parameter]
+
+
+      }
+      parameterValue.id = parameter+"_val"
+      parameterDiv.className = "parameterDiv"
+      parameterLabel.className = "parameterLabel"
+      parameterValue.className = "parameterValue"
+      parameterDiv.classList.add("hidden")
+
+      
+      parameterLabel.innerHTML = parameter
+
+      parameterDiv.appendChild(parameterLabel)
+      parameterDiv.appendChild(parameterValue)
+      content.appendChild(parameterDiv)      
+    }
+
+
+    document.getElementById("_batteryLevel").classList.remove("hidden")
+    document.getElementById("_cameraId").classList.remove("hidden")
+    document.getElementById("_cameraIdSupport").classList.remove("hidden")
+
+    document.getElementById("_timer").classList.remove("hidden")
+    document.getElementById("_timerSupport").classList.remove("hidden")
+    document.getElementById("sleepDelay").classList.remove("hidden")
+    document.getElementById("sleepDelaySupport").classList.remove("hidden")
+    document.getElementById("_angle").classList.remove("hidden")
+    document.getElementById("_angleSupport").classList.remove("hidden")
+    document.getElementById("remainingPictures").classList.remove("hidden")
+    document.getElementById("remainingVideoMinutes").classList.remove("hidden")
+
+
+    
+  });
+
+}
+function setOption(parameter, data){
+  const timer = {name:"camera.setOptions",
+  "parameters":{
+    "options":{
+      [parameter]:data}
+    }
+    }
+  postData('http://192.168.43.1:6624/osc/commands/execute', timer )
+}
+   ////////// GET IMAGE LIST ////////
+
+   const imagesList = { 
+  "name": "camera.listFiles",
+  "parameters":  {
+    "entryCount": 50,  
+    "fileType":"all",
+    "maxThumbSize": 100,
+    "startPosition":120
+  }
+}
+  postData('http://192.168.43.1:6624/osc/commands/execute', imagesList )
+  .then((data) => {
+    const imagesDiv = document.getElementById("imagesDiv")
+    console.log(data); 
+    for (let index = 0; index < data.results.entries.length; index++) {
+      let element = data.results.entries[index]; 
+      let image = document.createElement("img");
+      let image_href = document.createElement("a");
+ 
+      image_href.href="http://192.168.43.1:6624/"+data.results.entries[index].fileUrl
+      if(data.results.entries[index].name.includes("mp4") )
+      image_href.download = ""
+    
+      image.src ="data:application/octet-stream;base64,"+ data.results.entries[index].thumbnail
+      
+      image_href.appendChild(image)
+      imagesDiv.appendChild(image_href)
+    }
+  });
+
+  </script>
+
+  
+</body>
+</html>
