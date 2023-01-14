@@ -1,7 +1,7 @@
 {
     "name": "LG R105 360",
     "short_name": "LG 360",
-    "start_url": "index.html",
+    "start_url": "/media/e/app/index.html",
     "id":"/media/e/app/index.html",
     "scope": ".",
     "display": "standalone",
