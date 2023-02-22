@@ -6,7 +6,7 @@ Since LG dropped support for our lovely r105 360 camera I decided to use Google 
 Instructions:
 
 1. Plug your camera to PC. Create a folder called app on root folder. 
-2. Copy all files in this repo to app folder you created.
+2. Copy [all files](https://codeload.github.com/ozenc/LG-R105-Camera-App/zip/refs/heads/master) in this repo to app folder you created.
 3. Power on lg camera
 4. Turn on the device’s Wi-Fi by pressing the Power Button and the Shutter Button
 twice. You will see blue light blinks.
